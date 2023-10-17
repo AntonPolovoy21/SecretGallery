@@ -12,7 +12,7 @@
         <!--Authorization View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AuthorizationViewController" customModule="SecretGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="0" id="BYZ-38-t0r" customClass="AuthorizationViewController" customModule="SecretGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,15 +35,7 @@
                                     <constraint firstAttribute="width" constant="200" id="tN0-lu-h9n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="username"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUj-Cm-QjM">
-                                <rect key="frame" x="146.66666666666666" y="490.33333333333331" width="100" height="33.999999999999943"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="FcL-WP-NnW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your SecretGallery account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeQ-hJ-VDj">
                                 <rect key="frame" x="14.666666666666657" y="134" width="364" height="30"/>
@@ -56,19 +48,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CREATE">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                    </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="mpF-eg-cc0" kind="presentation" modalPresentationStyle="fullScreen" id="efb-Fy-SB5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cUj-Cm-QjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5uL-LV-2H4"/>
                             <constraint firstItem="fb2-pX-eav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="72a-mi-tvN"/>
                             <constraint firstItem="DeQ-hJ-VDj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gZ-0g-3ry"/>
                             <constraint firstItem="zuD-dY-IN8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="200" id="ATK-76-HEB"/>
                             <constraint firstItem="xib-Bx-qkZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Th9-99-482"/>
-                            <constraint firstItem="cUj-Cm-QjM" firstAttribute="top" secondItem="xib-Bx-qkZ" secondAttribute="bottom" constant="50" id="YfS-xx-GoC"/>
                             <constraint firstItem="DeQ-hJ-VDj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="75" id="ZO0-ji-BEz"/>
                             <constraint firstItem="xib-Bx-qkZ" firstAttribute="top" secondItem="fb2-pX-eav" secondAttribute="bottom" constant="52.670000000000002" id="dOc-Sk-fse"/>
                             <constraint firstItem="fb2-pX-eav" firstAttribute="top" secondItem="zuD-dY-IN8" secondAttribute="bottom" constant="50" id="vZ3-E0-lHW"/>
@@ -77,7 +73,6 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="fb2-pX-eav" id="fKL-Rm-MrU"/>
-                        <outlet property="pinTextField" destination="cUj-Cm-QjM" id="ZNs-2R-0zg"/>
                         <outlet property="submitButton" destination="W7C-7k-HEX" id="Ycs-RG-Mwc"/>
                     </connections>
                 </viewController>
@@ -85,10 +80,119 @@
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="5Se-xs-m5Y">
+            <objects>
+                <viewController storyboardIdentifier="1" id="mpF-eg-cc0" customClass="LogInViewController" customModule="SecretGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Hn-m4-Cb4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81L-Va-PhF">
+                                <rect key="frame" x="94" y="150" width="205" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CfB-e1-b9L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-xr-twl">
+                                <rect key="frame" x="180.66666666666666" y="570" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your PIN to log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEF-gK-2jU">
+                                <rect key="frame" x="84.000000000000014" y="310" width="225.33333333333337" height="27.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4E-d3-wYd">
+                                <rect key="frame" x="87" y="387.33333333333331" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9Ht-er-RZG"/>
+                                    <constraint firstAttribute="height" constant="40" id="pce-az-e3r"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puR-cQ-8CX">
+                                <rect key="frame" x="207" y="387.33333333333331" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1hh-Am-XA8"/>
+                                    <constraint firstAttribute="height" constant="40" id="jgu-O9-rpJ"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAK-Ej-5DP">
+                                <rect key="frame" x="147" y="387.33333333333331" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="0kM-Hp-8HT"/>
+                                    <constraint firstAttribute="height" constant="40" id="1sQ-ua-H63"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WxU-4b-3o1">
+                                <rect key="frame" x="267" y="387.33333333333331" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1t4-E9-7YG"/>
+                                    <constraint firstAttribute="height" constant="40" id="Qhv-of-Tyu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6k-Yo-I8E">
+                                <rect key="frame" x="67" y="345" width="259" height="131"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="aYp-8a-UJx"/>
+                                    <constraint firstAttribute="width" constant="259" id="nP6-2v-pNY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dlu-Ft-GXz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e6k-Yo-I8E" firstAttribute="centerY" secondItem="3Hn-m4-Cb4" secondAttribute="centerY" constant="-15.5" id="06t-ZH-fwn"/>
+                            <constraint firstItem="puR-cQ-8CX" firstAttribute="leading" secondItem="FAK-Ej-5DP" secondAttribute="trailing" constant="20" id="0mZ-g7-GgK"/>
+                            <constraint firstItem="puR-cQ-8CX" firstAttribute="top" secondItem="GEF-gK-2jU" secondAttribute="bottom" constant="50" id="1dv-Cv-UNW"/>
+                            <constraint firstItem="WxU-4b-3o1" firstAttribute="leading" secondItem="puR-cQ-8CX" secondAttribute="trailing" constant="20" id="9gf-F5-Us6"/>
+                            <constraint firstItem="WxU-4b-3o1" firstAttribute="top" secondItem="GEF-gK-2jU" secondAttribute="bottom" constant="50" id="JO6-2k-RFN"/>
+                            <constraint firstItem="vcV-xr-twl" firstAttribute="top" secondItem="81L-Va-PhF" secondAttribute="bottom" constant="350" id="Rao-4u-bFC"/>
+                            <constraint firstItem="e6k-Yo-I8E" firstAttribute="centerX" secondItem="3Hn-m4-Cb4" secondAttribute="centerX" id="T3E-Wu-a2b"/>
+                            <constraint firstItem="FAK-Ej-5DP" firstAttribute="top" secondItem="GEF-gK-2jU" secondAttribute="bottom" constant="50" id="YYC-e8-fOl"/>
+                            <constraint firstItem="81L-Va-PhF" firstAttribute="top" secondItem="Dlu-Ft-GXz" secondAttribute="top" constant="150" id="fRg-om-nE5"/>
+                            <constraint firstItem="81L-Va-PhF" firstAttribute="centerX" secondItem="3Hn-m4-Cb4" secondAttribute="centerX" id="jim-Ji-gpL"/>
+                            <constraint firstItem="i4E-d3-wYd" firstAttribute="leading" secondItem="Dlu-Ft-GXz" secondAttribute="leading" constant="87" id="kSL-yg-jqy"/>
+                            <constraint firstItem="FAK-Ej-5DP" firstAttribute="leading" secondItem="i4E-d3-wYd" secondAttribute="trailing" constant="20" id="oJL-ss-KPn"/>
+                            <constraint firstItem="GEF-gK-2jU" firstAttribute="top" secondItem="81L-Va-PhF" secondAttribute="bottom" constant="90" id="qTP-7g-wVS"/>
+                            <constraint firstItem="vcV-xr-twl" firstAttribute="centerX" secondItem="3Hn-m4-Cb4" secondAttribute="centerX" id="tIx-Bz-U3b"/>
+                            <constraint firstItem="i4E-d3-wYd" firstAttribute="top" secondItem="GEF-gK-2jU" secondAttribute="bottom" constant="50" id="xM7-nt-FQA"/>
+                            <constraint firstItem="GEF-gK-2jU" firstAttribute="centerX" secondItem="3Hn-m4-Cb4" secondAttribute="centerX" id="xy1-dN-8Ug"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Io-se-Pec"/>
+                    <connections>
+                        <outlet property="hiddenPinTextField" destination="vcV-xr-twl" id="3vl-Dd-90m"/>
+                        <outlet property="labelWelcome" destination="81L-Va-PhF" id="x6N-C9-6Ki"/>
+                        <outlet property="pinTextField" destination="vcV-xr-twl" id="dNP-YJ-5Au"/>
+                        <outlet property="pinView" destination="e6k-Yo-I8E" id="lsi-9a-dqQ"/>
+                        <outletCollection property="pinCircles" destination="i4E-d3-wYd" collectionClass="NSMutableArray" id="tyP-GB-Hg3"/>
+                        <outletCollection property="pinCircles" destination="FAK-Ej-5DP" collectionClass="NSMutableArray" id="UeR-rL-Ycl"/>
+                        <outletCollection property="pinCircles" destination="puR-cQ-8CX" collectionClass="NSMutableArray" id="llR-AP-eNA"/>
+                        <outletCollection property="pinCircles" destination="WxU-4b-3o1" collectionClass="NSMutableArray" id="hjw-JU-Vai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwg-iP-RwT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

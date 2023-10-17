@@ -16,6 +16,7 @@
 		84C7FFA02ADDB03600383DB7 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 84C7FF9F2ADDB03600383DB7 /* SnapKit-Dynamic */; };
 		84C7FFA42ADF20B000383DB7 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7FFA32ADF20B000383DB7 /* AuthorizationViewController.swift */; };
 		84C7FFA62ADF280600383DB7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7FFA52ADF280600383DB7 /* LogInViewController.swift */; };
+		84C7FFA82ADF346700383DB7 /* AuthorizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7FFA72ADF346700383DB7 /* AuthorizationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		84C7FF962ADDAA9B00383DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C7FFA32ADF20B000383DB7 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		84C7FFA52ADF280600383DB7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		84C7FFA72ADF346700383DB7 /* AuthorizationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				84C7FF962ADDAA9B00383DB7 /* Info.plist */,
 				84C7FFA32ADF20B000383DB7 /* AuthorizationViewController.swift */,
 				84C7FFA52ADF280600383DB7 /* LogInViewController.swift */,
+				84C7FFA72ADF346700383DB7 /* AuthorizationData.swift */,
 			);
 			path = SecretGallery;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				84C7FFA42ADF20B000383DB7 /* AuthorizationViewController.swift in Sources */,
 				84C7FF892ADDAA9900383DB7 /* AppDelegate.swift in Sources */,
 				84C7FF8B2ADDAA9900383DB7 /* SceneDelegate.swift in Sources */,
+				84C7FFA82ADF346700383DB7 /* AuthorizationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
