@@ -30,6 +30,8 @@ class AuthorizationViewController: UIViewController {
     
     @objc private func authorize() {
         AuthorizationData.isAuthorized = true
+        AuthorizationData.userName = nameTextField.text ?? "Guest"
+        AuthorizationData.userPin = pinTextField.text
     }
     
 }
@@ -53,6 +55,7 @@ extension AuthorizationViewController: UITextFieldDelegate {
         if pinTextField.text?.count ?? 0 > 4 { pinTextField.text?.removeLast() }
         if nameTextField.text?.count ?? 0 > 10 { nameTextField.text?.removeLast() }
         if (pinTextField.text ?? "").contains(".") { pinTextField.text?.removeAll(where: { $0 == "."}) }
+        
         let isNameTyped = !(nameTextField.text ?? "").isEmpty
         let isPinTyped = pinTextField.text?.count == 4
         

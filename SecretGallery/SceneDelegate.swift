@@ -20,8 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let isUserAuthorized = AuthorizationData.isAuthorized ?? false
-        
-        if isUserAuthorized {
+        if !isUserAuthorized {
             let authorizedViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "0")
             window?.rootViewController = authorizedViewController
         } else {
